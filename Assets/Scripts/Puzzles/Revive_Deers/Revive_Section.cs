@@ -7,16 +7,14 @@ public class Revive_Section : MonoBehaviour
     public GameObject[] deers;
     public GameObject objectToActivate;
 
+    public bool[] deerBools;
+
     private void Update()
     {
-        foreach(GameObject g in deers)
+        if(deerBools[0] && deerBools[1] && deerBools[2] && deerBools[3] && deerBools[4])
         {
-            if(g != null)
-            {
-                break;
-            }
-
             objectToActivate.SetActive(true);
+            Destroy(gameObject, 2f);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using MalbersAnimations;
 using UnityEngine;
 
-//Class we attach to deers for the Revive section.
+//Class we attach to deers for the Revive routine.
 public class Deer_Manager : MonoBehaviour
 {
     //Variables.
@@ -11,6 +11,9 @@ public class Deer_Manager : MonoBehaviour
     private bool isReadyToGo;
 
     public GameObject objectToActivate;
+    public int deerID;
+
+    public Revive_Section reviveManager;
 
     private void Start()
     {
@@ -41,6 +44,9 @@ public class Deer_Manager : MonoBehaviour
     public void GetGoing()
     {
         animalAi.enabled = true;
+
+        reviveManager.deerBools[deerID] = true;
+
         Destroy(gameObject, 5);
     }
 }
