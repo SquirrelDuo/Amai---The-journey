@@ -4,11 +4,12 @@
 public class Each_Rotating_Stone : MonoBehaviour
 {
     //Variables.
-    public Transform[] possibleRotations;
+    public string[] possibleStateNames;
+    public Animator thisAnimator;
     public int currentRotation;
 
     private void OnEnable()
     {
-        currentRotation = 5;
+        currentRotation = 5; //We set an impossible rotation.
     }
 }
