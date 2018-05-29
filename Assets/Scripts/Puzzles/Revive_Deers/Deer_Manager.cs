@@ -11,12 +11,10 @@ public class Deer_Manager : MonoBehaviour
     private bool isReadyToGo;
 
     public GameObject objectToActivate;
-    public int deerID;
-
-    public Revive_Section reviveManager;
 
     private void Start()
     {
+        //Getting script references.
         animator = GetComponent<Animator>();
         animalAi = GetComponent<AnimalAIControl>();
         animator.Play("Sleep");
@@ -24,6 +22,7 @@ public class Deer_Manager : MonoBehaviour
 
     private void Update()
     {
+        //Checking if we have to start the routine.
         if (isReadyToGo)
         {
             Invoke("GetGoing", 3);
@@ -44,8 +43,6 @@ public class Deer_Manager : MonoBehaviour
     public void GetGoing()
     {
         animalAi.enabled = true;
-
-        reviveManager.deerBools[deerID] = true;
 
         Destroy(gameObject, 5);
     }

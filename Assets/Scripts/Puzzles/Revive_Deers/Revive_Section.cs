@@ -4,17 +4,22 @@
 public class Revive_Section : MonoBehaviour
 {
     //Variables.
-    public GameObject[] deers;
     public GameObject objectToActivate;
-
-    public bool[] deerBools;
+    private bool[] keyBools;
 
     private void Update()
     {
-        if(deerBools[0] && deerBools[1] && deerBools[2] && deerBools[3] && deerBools[4])
+        //We check if the conditions are met.
+        if(keyBools[0] && keyBools[1] && keyBools[2])
         {
             objectToActivate.SetActive(true);
             Destroy(gameObject, 2f);
         }
+    }
+
+    //Method for modifying booleans.
+    public void SetBool(int boolNum)
+    {
+        keyBools[boolNum] = true;
     }
 }
