@@ -5,7 +5,7 @@ public class Revive_Section : MonoBehaviour
 {
     //Variables.
     public GameObject objectToActivate;
-    private bool[] keyBools;
+    public bool[] keyBools;
 
     private void Update()
     {

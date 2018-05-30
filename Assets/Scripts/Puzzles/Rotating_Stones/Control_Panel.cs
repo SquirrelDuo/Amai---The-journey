@@ -5,6 +5,23 @@ public class Control_Panel : MonoBehaviour
 {
     //Variables.
     public Each_Rotating_Stone[] rotatingStones; //We store a reference to the stones.
+    public Stone_Panel_Triggers[] triggerObjects;
+
+    private void Update()
+    {
+        if(triggerObjects[0].isActivated &&
+            triggerObjects[1].isActivated &&
+            triggerObjects[2].isActivated &&
+            triggerObjects[3].isActivated &&
+            triggerObjects[4].isActivated &&
+            triggerObjects[5].isActivated &&
+            triggerObjects[6].isActivated &&
+            triggerObjects[7].isActivated)
+        {
+            GetComponent<Animator>().enabled = true;
+            this.enabled = false;
+        }
+    }
 
     //Moving 1 and 3.
     public void FirstMovement()

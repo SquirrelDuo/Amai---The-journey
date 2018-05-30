@@ -53,9 +53,18 @@ public class Variables_To_Save : MonoBehaviour
     public GameObject rollingBall;
     public bool isRolling;
 
-    [Header("Section 12")]
+    [Header("Section 14")]
     public GameObject[] collectables;
     public Collector_Manager collectorManager;
+
+    [Header("Section 16")]
+    //For the main routine and storyline.
+    public Revive_Section reviveManager;
+    public GameObject[] enviroSymbols;
+    public GameObject treePlatform;
+    //For the spirit revive element.
+    public GameObject[] spiritObjects;
+    public bool[] spiritStatus;
 
     //Method for player prefab and position on start.
     private IEnumerator Start()
@@ -96,6 +105,7 @@ public class Variables_To_Save : MonoBehaviour
         }
     }
 
+    //Method we use for moving the player.
     private void MovePlayer(int positionNumber)
     {
         playerPrefabs[currentPlayerPrefab].transform.position = possiblePlayerPositions[positionNumber].transform.position;
@@ -235,5 +245,24 @@ public class Variables_To_Save : MonoBehaviour
                 else if(i == 5) { collectorManager.levelSixth.SetActive(true); collectorManager.collectables[5].SetActive(false); }
             }
         }
+    }
+
+    //Method for checking and setting enviro symbols in Section 16.
+    public void EnviroSymbols()
+    {
+        if(reviveManager.keyBools[0] && reviveManager.keyBools[1] && reviveManager.keyBools[2])
+        {
+            treePlatform.SetActive(true);
+        }
+    }
+
+    //Method for checking and setting spirits in Section 16.
+    public void SpiritSetup()
+    {
+        if (spiritStatus[0]) { spiritObjects[0].SetActive(false); }
+        if (spiritStatus[1]) { spiritObjects[1].SetActive(false); }
+        if (spiritStatus[2]) { spiritObjects[2].SetActive(false); }
+        if (spiritStatus[3]) { spiritObjects[3].SetActive(false); }
+        if (spiritStatus[4]) { spiritObjects[4].SetActive(false); }
     }
 }
