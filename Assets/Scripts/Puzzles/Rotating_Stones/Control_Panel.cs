@@ -6,6 +6,7 @@ public class Control_Panel : MonoBehaviour
     //Variables.
     public Each_Rotating_Stone[] rotatingStones; //We store a reference to the stones.
     public Stone_Panel_Triggers[] triggerObjects;
+    public GameObject[] objectsToDeactivate;
 
     private void Update()
     {
@@ -19,6 +20,12 @@ public class Control_Panel : MonoBehaviour
             triggerObjects[7].isActivated)
         {
             GetComponent<Animator>().enabled = true;
+
+            foreach(GameObject g in objectsToDeactivate)
+            {
+                g.SetActive(false);
+            }
+
             this.enabled = false;
         }
     }
