@@ -16,7 +16,6 @@ public class Flamethrower_Trigger : MonoBehaviour
         //Assign the "Animal" Layer to the Player.
         if (other.gameObject.layer == 20)
         {
-            Debug.Log("In it!");
             InitDead();
         }
     }
@@ -25,13 +24,14 @@ public class Flamethrower_Trigger : MonoBehaviour
     {
         //malbersInput.enabled = false;
         //animalScript.enabled = false;
-        //animalAnimator.Play("Death1");
+        animalAnimator.Play("Death1");
         Invoke("InitRestart", 2f);
     }
 
     private void InitRestart()
     {
         checkpointManager.isDead = true;
+        animalAnimator.gameObject.GetComponent<Material_Smooth_Changer>().isBurning = false;
         //malbersInput.enabled = true;
         //animalScript.enabled = true;
         Invoke("IdleReset", 2f);
@@ -39,6 +39,6 @@ public class Flamethrower_Trigger : MonoBehaviour
 
     private void IdleReset()
     {
-        //animalAnimator.Play("Idle 01");
+        animalAnimator.Play("Idle 01");
     }
 }
