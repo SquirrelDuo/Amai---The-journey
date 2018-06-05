@@ -86,7 +86,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4461076479184864}
   - component: {fileID: 212934520969342658}
-  - component: {fileID: 95975975377163278}
   m_Layer: 0
   m_Name: Triskel
   m_TagString: Untagged
@@ -111,25 +110,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1758710358774788
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4742916491475430}
-  - component: {fileID: 33809655136755326}
-  - component: {fileID: 65797193123978600}
-  - component: {fileID: 23825904634693136}
-  - component: {fileID: 114860306812554334}
-  m_Layer: 2
-  m_Name: Trigger_Oltar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &4122801054388954
 Transform:
   m_ObjectHideFlags: 1
@@ -149,29 +129,28 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053719738990506}
-  m_LocalRotation: {x: 0.052648623, y: -0.5802685, z: -0.29938406, w: 0.7555699}
-  m_LocalPosition: {x: 74.46946, y: 18.828726, z: -17.439426}
+  m_LocalRotation: {x: -0.27135813, y: 0.09456957, z: -0.1770942, w: 0.94130707}
+  m_LocalPosition: {x: -138.97415, y: -25.924, z: 151.9945}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4461076479184864}
   - {fileID: 4939656264015982}
-  - {fileID: 4742916491475430}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -15.5390005, y: -70.536, z: -32.208}
+  m_LocalEulerAnglesHint: {x: -28.514002, y: 18.179, z: -25.966002}
 --- !u!4 &4461076479184864
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1571874703838528}
-  m_LocalRotation: {x: 0.60440254, y: -0.23832661, z: 0.33630872, w: 0.68175834}
-  m_LocalPosition: {x: 0.068, y: 0.544, z: -0.095}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.03}
+  m_LocalRotation: {x: 0.64461774, y: -0.08105549, z: 0.15680258, w: 0.74384874}
+  m_LocalPosition: {x: 0.043997623, y: 0.5469985, z: -0.06399977}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 4190384738187566}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 79.871, y: 27.635002, z: 75.784004}
+  m_LocalEulerAnglesHint: {x: 79.871, y: 27.635002, z: 47.077003}
 --- !u!4 &4582159290105948
 Transform:
   m_ObjectHideFlags: 1
@@ -185,19 +164,6 @@ Transform:
   m_Father: {fileID: 4939656264015982}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -10.469001, y: 0, z: 0}
---- !u!4 &4742916491475430
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1758710358774788}
-  m_LocalRotation: {x: -0.2268199, y: 0.2770502, z: -0.40439132, w: 0.841584}
-  m_LocalPosition: {x: 0.2135, y: 0.5388, z: -0.2966}
-  m_LocalScale: {x: 1.000001, y: 1.0528454, z: 1.5337607}
-  m_Children: []
-  m_Father: {fileID: 4190384738187566}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -9.074, y: 41.148003, z: -54.742004}
 --- !u!4 &4773243131212320
 Transform:
   m_ObjectHideFlags: 1
@@ -261,40 +227,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23825904634693136
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1758710358774788}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!33 &33211762103216294
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -323,13 +255,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1100575383991554}
   m_Mesh: {fileID: 4300000, guid: a3273aaf38839d84bbda587678eca1ec, type: 3}
---- !u!33 &33809655136755326
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1758710358774788}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &65434348292410674
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -366,119 +291,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.40730476, y: 0.91734284, z: 0.7406714}
   m_Center: {x: -0.29179478, y: -0.29567164, z: -0.12966438}
---- !u!65 &65797193123978600
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1758710358774788}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &95975975377163278
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1571874703838528}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c8f4d3c3869c434a92932547a195868, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114860306812554334
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1758710358774788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9c9f08a3e62d6479c76be499151cb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionsToUse: {fileID: 11400000, guid: da07aa68e45767f46a979ffa21e8ca41, type: 2}
-  automatic: 0
-  ID: 20
-  index: 9
-  AutomaticDisabled: 10
-  HeadOnly: 0
-  ActiveOnJump: 0
-  Align: 0
-  AlingPoint: {fileID: 4742916491475430}
-  AlignTime: 0.5
-  AlignCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  AlignPos: 1
-  AlignRot: 1
-  AlignLookAt: 0
-  ActionDelay: 0
-  OnEnter:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: MalbersAnimations.AnimalEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  OnExit:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: MalbersAnimations.AnimalEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  OnAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 95975975377163278}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 114860306812554334}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: MalbersAnimations.AnimalEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  stoppingDistance: 0.5
-  NextTarget: {fileID: 0}
-  EditorShowEvents: 1
-  EditorAI: 1
 --- !u!212 &212934520969342658
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -513,8 +325,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59ed140901b5cd0419edb1da0f73b7dc, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.322}
+  m_Sprite: {fileID: 21300000, guid: 2599bd6e36a9e1641baa12f140e9ff08, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
