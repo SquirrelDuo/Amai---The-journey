@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothness: 5
-  MaxDrag: 100
+  MaxDrag: 200
   stillContraints: 1
   Landing: 1
 --- !u!114 &11445532
