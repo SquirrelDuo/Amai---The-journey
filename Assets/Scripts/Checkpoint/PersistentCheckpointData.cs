@@ -59,32 +59,6 @@ public class PersistentCheckpointData : MonoBehaviour
         DialogueLua.SetVariable("BoolFour", variablesToSave.collectorManager.areTaken[3]);
         DialogueLua.SetVariable("BoolFive", variablesToSave.collectorManager.areTaken[4]);
         DialogueLua.SetVariable("BoolSix", variablesToSave.collectorManager.areTaken[5]);
-
-        //Enviro Symbols from Section 16.
-        DialogueLua.SetVariable("KeyOne", variablesToSave.reviveManager.keyBools[0]);
-        DialogueLua.SetVariable("KeyTwo", variablesToSave.reviveManager.keyBools[1]);
-        DialogueLua.SetVariable("KeyThree", variablesToSave.reviveManager.keyBools[2]);
-
-        //Spirit Animals from Section 16.
-        if(variablesToSave.spiritObjects[0] != null) { variablesToSave.spiritStatus[0] = false; }
-        else if(variablesToSave.spiritObjects[0] == null) { variablesToSave.spiritStatus[0] = true; }
-        DialogueLua.SetVariable("SpiritOne", variablesToSave.spiritStatus[0]);
-
-        if (variablesToSave.spiritObjects[1] != null) { variablesToSave.spiritStatus[1] = false; }
-        else if (variablesToSave.spiritObjects[1] == null) { variablesToSave.spiritStatus[1] = true; }
-        DialogueLua.SetVariable("SpiritTwo", variablesToSave.spiritStatus[1]);
-
-        if (variablesToSave.spiritObjects[2] != null) { variablesToSave.spiritStatus[2] = false; }
-        else if (variablesToSave.spiritObjects[2] == null) { variablesToSave.spiritStatus[2] = true; }
-        DialogueLua.SetVariable("SpiritThree", variablesToSave.spiritStatus[2]);
-
-        if (variablesToSave.spiritObjects[3] != null) { variablesToSave.spiritStatus[3] = false; }
-        else if (variablesToSave.spiritObjects[3] == null) { variablesToSave.spiritStatus[3] = true; }
-        DialogueLua.SetVariable("SpiritFour", variablesToSave.spiritStatus[3]);
-
-        if (variablesToSave.spiritObjects[4] != null) { variablesToSave.spiritStatus[4] = false; }
-        else if (variablesToSave.spiritObjects[4] == null) { variablesToSave.spiritStatus[4] = true; }
-        DialogueLua.SetVariable("SpiritFour", variablesToSave.spiritStatus[4]);
     }
 
     public void OnApplyPersistentData()
@@ -177,20 +151,6 @@ public class PersistentCheckpointData : MonoBehaviour
         variablesToSave.collectorManager.areTaken[4] = DialogueLua.GetVariable("BoolFive").AsBool;
         variablesToSave.collectorManager.areTaken[5] = DialogueLua.GetVariable("BoolSix").AsBool;
         variablesToSave.CheckCollectables();
-
-        //Enviro Symbols from Section 16.
-        variablesToSave.reviveManager.keyBools[0] = DialogueLua.GetVariable("KeyOne").AsBool;
-        variablesToSave.reviveManager.keyBools[1] = DialogueLua.GetVariable("KeyTwo").AsBool;
-        variablesToSave.reviveManager.keyBools[2] = DialogueLua.GetVariable("KeyThree").AsBool;
-        variablesToSave.EnviroSymbols();
-
-        //Spirit Animals from Section 16.
-        variablesToSave.spiritStatus[0] = DialogueLua.GetVariable("SpiritOne").AsBool;
-        variablesToSave.spiritStatus[1] = DialogueLua.GetVariable("SpiritTwo").AsBool;
-        variablesToSave.spiritStatus[2] = DialogueLua.GetVariable("SpiritThree").AsBool;
-        variablesToSave.spiritStatus[3] = DialogueLua.GetVariable("SpiritFour").AsBool;
-        variablesToSave.spiritStatus[4] = DialogueLua.GetVariable("SpiritFive").AsBool;
-        variablesToSave.SpiritSetup();
     }
 
     public void OnEnable()

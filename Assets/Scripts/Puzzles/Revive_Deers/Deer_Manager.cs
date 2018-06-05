@@ -1,7 +1,7 @@
 ﻿using MalbersAnimations;
 using UnityEngine;
 
-//Class we attach to deers for the Revive routine.
+//Class we attach to deers for the Revive section.
 public class Deer_Manager : MonoBehaviour
 {
     //Variables.
@@ -14,7 +14,6 @@ public class Deer_Manager : MonoBehaviour
 
     private void Start()
     {
-        //Getting script references.
         animator = GetComponent<Animator>();
         animalAi = GetComponent<AnimalAIControl>();
         animator.Play("Sleep");
@@ -22,7 +21,6 @@ public class Deer_Manager : MonoBehaviour
 
     private void Update()
     {
-        //Checking if we have to start the routine.
         if (isReadyToGo)
         {
             Invoke("GetGoing", 3);
@@ -43,7 +41,6 @@ public class Deer_Manager : MonoBehaviour
     public void GetGoing()
     {
         animalAi.enabled = true;
-
         Destroy(gameObject, 5);
     }
 }

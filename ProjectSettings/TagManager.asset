@@ -7,7 +7,6 @@ TagManager:
   - Water
   - HitPlatform
   - RollingBall
-  - StonePanel
   layers:
   - Default
   - TransparentFX
