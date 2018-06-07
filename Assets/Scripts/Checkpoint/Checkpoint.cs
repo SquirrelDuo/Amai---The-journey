@@ -14,6 +14,10 @@ public class Checkpoint : MonoBehaviour
     public bool isSpecific;
     public GameObject[] specificObjects;
 
+    [Header("Falling Platforms")]
+    public bool fallingPlatforms;
+    public Falling_Platform[] fallingPlatformsList;
+
     [Header("Section 9")]
     public bool isLightingWall;
 
@@ -62,5 +66,19 @@ public class Checkpoint : MonoBehaviour
         persistentValues.rollingBall.SetActive(false);
 
         persistentValues.rollingBall.GetComponent<Animation>()["Rolling_Ball"].time = 0;
+    }
+
+    //Reseting the falling platforms.
+    public void FallingPlatforms()
+    {
+        for(int i = 0; i <= fallingPlatformsList.Length - 1; i++)
+        {
+            fallingPlatformsList[i].GetComponent<Rigidbody>().isKinematic = true; //We want to reset forces on Rigidbody.
+
+            fallingPlatformsList[i].transform.position = fallingPlatformsList[i].startingPosition; //Position reset.
+            fallingPlatformsList[i].transform.rotation = fallingPlatformsList[i].startingRotation; //Rotation reset.
+
+            fallingPlatformsList[i].GetComponent<Rigidbody>().isKinematic = false;
+        }
     }
 }

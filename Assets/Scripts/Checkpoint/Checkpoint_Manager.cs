@@ -72,6 +72,14 @@ public class Checkpoint_Manager : MonoBehaviour
                     player.transform.position = checkpoints[i].GetComponent<Checkpoint>().positionToMove.transform.position; //The player takes the last checkpoint's position.
                     isDead = false;
                 }
+                //If the checkpoint has falling platforms.
+                else if (checkpoints[i].GetComponent<Checkpoint>().fallingPlatforms)
+                {
+                    checkpoints[i].GetComponent<Checkpoint>().FallingPlatforms();
+
+                    player.transform.position = checkpoints[i].GetComponent<Checkpoint>().positionToMove.transform.position; //The player takes the last checkpoint's position.
+                    isDead = false;
+                }
                 //If the checkpoint is ordinary.
                 else
                 {
