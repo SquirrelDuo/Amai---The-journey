@@ -83,7 +83,7 @@ namespace MalbersAnimations
         public enum Ground { walk = 1, trot = 2, run = 3 }
 
         //We need to set up cub type.
-        public enum CubType { ordinary = 1, lightning = 2, fire = 3}
+        public enum PowerUp { none = 1, speed = 2, shield = 3}
 
         public GameObject lightningParticles;
 
@@ -160,7 +160,7 @@ namespace MalbersAnimations
         public LayerMask GroundLayer = 1;
         public Ground StartSpeed = Ground.walk;
 
-        public CubType cubType = CubType.ordinary;
+        public PowerUp powerUp = PowerUp.none; //We assign the default power up.
 
         public float height = 1f;                   //Distance from the Pivots to the ground
 

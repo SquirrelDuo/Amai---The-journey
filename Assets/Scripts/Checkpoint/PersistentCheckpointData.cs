@@ -21,7 +21,7 @@ public class PersistentCheckpointData : MonoBehaviour
         DialogueLua.SetVariable("ListSize", checkpointManager.listSize);
 
         //Player prefab and position.
-        DialogueLua.SetVariable("CurrentPlayerPrefab", variablesToSave.currentPlayerPrefab);
+        //DialogueLua.SetVariable("CurrentPlayerPrefab", variablesToSave.currentPlayerPrefab);
 
         //Skybox.
         DialogueLua.SetVariable("CurrentSkybox", variablesToSave.currentSkybox);
@@ -124,7 +124,7 @@ public class PersistentCheckpointData : MonoBehaviour
         }
 
         //Player position and prefab.
-        variablesToSave.currentPlayerPrefab = DialogueLua.GetVariable("CurrentPlayerPrefab").AsInt;
+        //variablesToSave.currentPlayerPrefab = DialogueLua.GetVariable("CurrentPlayerPrefab").AsInt;
 
         //Skybox.
         variablesToSave.currentSkybox = DialogueLua.GetVariable("CurrentSkybox").AsInt;

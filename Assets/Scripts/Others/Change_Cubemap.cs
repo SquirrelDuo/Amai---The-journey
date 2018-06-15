@@ -9,19 +9,19 @@ public class Change_Cubemap : MonoBehaviour
     public Material cubeMap;
     public int chooseLight; //Number corresponding to a specific light source.
     public int fallTriggers;
-    public int currentPlayer;
+    //public int currentPlayer;
 
     public void ChangeSettings()
     {
         persistentValues = GameObject.Find("Persistent_Values").GetComponent<Variables_To_Save>();
 
         //Player.
-        persistentValues.currentPlayerPrefab = currentPlayer;
-        Checkpoint_Manager manager = GameObject.Find("CheckPoint_Manager").GetComponent<Checkpoint_Manager>();
-        manager.player = persistentValues.playerPrefabs[currentPlayer];
+        //persistentValues.currentPlayerPrefab = currentPlayer;
+        //Checkpoint_Manager manager = GameObject.Find("CheckPoint_Manager").GetComponent<Checkpoint_Manager>();
+        //manager.player = persistentValues.playerPrefabs[currentPlayer];
 
         //Camera change.
-        persistentValues.cameraPrefab.GetComponent<MFreeLookCamera>().m_Target = persistentValues.playerPrefabs[currentPlayer].transform;
+        //persistentValues.cameraPrefab.GetComponent<MFreeLookCamera>().m_Target = persistentValues.playerPrefabs[currentPlayer].transform;
 
         //Skybox.
         RenderSettings.skybox = cubeMap;

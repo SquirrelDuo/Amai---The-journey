@@ -743,7 +743,7 @@ namespace MalbersAnimations
 
             if (Shift)
             {
-                if (cubType == CubType.lightning)
+                if (powerUp == PowerUp.speed)
                 {
                     maxspeed++;
                     runSpeed.position = 3;
@@ -763,14 +763,14 @@ namespace MalbersAnimations
                         }
                     }
                 }
-                else if(cubType == CubType.ordinary || cubType == CubType.fire)
+                else if(powerUp == PowerUp.none || powerUp == PowerUp.shield)
                 {
                     maxspeed++; //Increase the Speed with Shift pressed
                 }
             }
             else if (!Shift)
             {
-                if(cubType == CubType.lightning)
+                if(powerUp == PowerUp.speed)
                 {
                     lightningParticles.SetActive(false);
                 }

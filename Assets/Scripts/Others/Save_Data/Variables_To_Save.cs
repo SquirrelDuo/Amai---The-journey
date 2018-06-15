@@ -6,15 +6,15 @@ using System.Collections;
 public class Variables_To_Save : MonoBehaviour
 {
     //Variables.
-    [Header("Player position and prefabs")]
-    public GameObject[] playerPrefabs;
-    public int currentPlayerPrefab;
-    public GameObject[] possiblePlayerPositions;
-    public bool[] isCurrentlyActive;
-    public Checkpoint_Manager checkpointManager;
+    //[Header("Player position and prefabs")]
+    //public GameObject[] playerPrefabs;
+    //public int currentPlayerPrefab;
+    //public GameObject[] possiblePlayerPositions;
+    //public bool[] isCurrentlyActive;
+    //public Checkpoint_Manager checkpointManager;
 
-    [Header("Player camera")]
-    public GameObject cameraPrefab;
+    //[Header("Player camera")]
+    //public GameObject cameraPrefab;
 
     [Header("Skybox Settings")]
     public Material[] skyboxes;
@@ -67,7 +67,7 @@ public class Variables_To_Save : MonoBehaviour
     public bool[] spiritStatus;
 
     //Method for player prefab and position on start.
-    private IEnumerator Start()
+    /*private IEnumerator Start()
     {
         yield return null;
         yield return null;
@@ -86,9 +86,9 @@ public class Variables_To_Save : MonoBehaviour
                 playerPrefabs[i].SetActive(false);
             }
         }
-    }
+    }*/
 
-    public void ActivatePlayerPosition(int positionNum)
+    /*public void ActivatePlayerPosition(int positionNum)
     {
         for(int i = 0; i <= isCurrentlyActive.Length - 1; i++)
         {
@@ -103,13 +103,13 @@ public class Variables_To_Save : MonoBehaviour
 
             MovePlayer(positionNum);
         }
-    }
+    }*/
 
     //Method we use for moving the player.
-    private void MovePlayer(int positionNumber)
+    /*private void MovePlayer(int positionNumber)
     {
         playerPrefabs[currentPlayerPrefab].transform.position = possiblePlayerPositions[positionNumber].transform.position;
-    }
+    }*/
 
     //Method for getting animation time in Section 9.
     public void GetAnimationTime()
