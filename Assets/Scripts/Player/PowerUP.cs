@@ -8,6 +8,7 @@ public class PowerUP : MonoBehaviour
 {
     //Variables.
     public PowerUpType powerType = PowerUpType.speed;
+    public AbilityManager abilityManager; //The manager attached to the player.
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,14 +16,14 @@ public class PowerUP : MonoBehaviour
         {
             if(powerType == PowerUpType.speed)
             {
-                //Invoke the speed method.
+                //Invoke the store method.
+                abilityManager.haveSpeedAbility = true;
             }
             else if(powerType == PowerUpType.shield)
             {
-                //Invoke the shield method.
+                //Invoke the store method.
+                abilityManager.haveShieldAbility = true;
             }
         }
     }
-
-    dsad
 }

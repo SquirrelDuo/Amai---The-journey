@@ -14,7 +14,7 @@ namespace MalbersAnimations
         protected Animal myAnimal;
         MonoScript script;
         protected SerializedProperty
-            animalTypeID, GroundLayer, StartSpeed, cubType, lightningParticles, Height, WalkSpeed, TrotSpeed, RunSpeed,
+            animalTypeID, GroundLayer, StartSpeed, lightningParticles, Height, WalkSpeed, TrotSpeed, RunSpeed,
 
             FallRayDistance, YAxisPositiveMultiplier, YAxisNegativeMultiplier,
 
@@ -52,7 +52,6 @@ namespace MalbersAnimations
 
         protected void FindProperties()
         {
-            cubType = serializedObject.FindProperty("cubType");
             lightningParticles = serializedObject.FindProperty("lightningParticles");
 
             animalTypeID = serializedObject.FindProperty("animalTypeID");
@@ -138,7 +137,6 @@ namespace MalbersAnimations
             {
                 EditorGUILayout.BeginVertical(MalbersEditor.FlatBox);
 
-                EditorGUILayout.PropertyField(cubType, new GUIContent("Cub Type", "Specify wich type is the cub"));
                 EditorGUILayout.PropertyField(lightningParticles, new GUIContent("Lightning Particles", "Assign particles"));
                 EditorGUILayout.PropertyField(GroundLayer, new GUIContent("Ground Layer", "Specify wich layer are Ground"));
                 EditorGUILayout.PropertyField(StartSpeed, new GUIContent("Start Speed", "Activate the correct additive Animation to offset the Bones"));

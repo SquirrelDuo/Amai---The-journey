@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using MalbersAnimations.Events;
 using MalbersAnimations.Utilities;
 
+public enum PowerUp { none = 1, speed = 2, shield = 3 }
 
 namespace MalbersAnimations
 {
@@ -83,7 +84,7 @@ namespace MalbersAnimations
         public enum Ground { walk = 1, trot = 2, run = 3 }
 
         //We need to set up cub type.
-        public enum PowerUp { none = 1, speed = 2, shield = 3}
+        //public enum PowerUp { none = 1, speed = 2, shield = 3}
 
         public GameObject lightningParticles;
 
