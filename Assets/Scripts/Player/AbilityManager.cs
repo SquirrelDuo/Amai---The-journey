@@ -25,9 +25,10 @@ public class AbilityManager : MonoBehaviour
             timer += 1 * Time.deltaTime;
             SpeedAbility();
 
-            if (timer > 5)
+            if (timer > 15f)
             {
                 haveSpeedAbility = false;
+                ourAnimal.powerUp = PowerUp.none;
             }
         }
 

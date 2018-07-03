@@ -748,7 +748,7 @@ namespace MalbersAnimations
                     maxspeed++;
                     runSpeed.position = 3;
                     runSpeed.animator = 3;
-                    lightningParticles.SetActive(true);
+                    //lightningParticles.SetActive(true);
 
                     //We get rid of the jump.
                     jump = false;
@@ -766,13 +766,15 @@ namespace MalbersAnimations
                 else if(powerUp == PowerUp.none || powerUp == PowerUp.shield)
                 {
                     maxspeed++; //Increase the Speed with Shift pressed
+                    runSpeed.position = 1;
+                    runSpeed.animator = 1;
                 }
             }
             else if (!Shift)
             {
                 if(powerUp == PowerUp.speed)
                 {
-                    lightningParticles.SetActive(false);
+                    //lightningParticles.SetActive(false);
                 }
             }
 
